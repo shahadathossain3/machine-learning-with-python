@@ -22,3 +22,7 @@ y=sc_y.fit_transform(y)
 
 print(X)
 print(y)
+
+from sklearn.svm import SVR
+regressor=SVR(kernel= 'rbf')
+regressor.fit(X, y)
