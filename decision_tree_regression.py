@@ -11,3 +11,6 @@ regressor=DecisionTreeRegressor(random_state=0)
 regressor_result=regressor.fit(X, y)
 
 print(regressor)
+
+predict_new_result=regressor.predict([[6.5]])
+print(predict_new_result)
