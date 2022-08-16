@@ -30,3 +30,10 @@ regressor.fit(X, y)
 
 preduct_new_result=sc_y.inverse_transform(regressor.predict(sc_X.transform([[6.5]])))
 print(preduct_new_result)
+
+plt.scatter(sc_X.inverse_transform(X),sc_y.inverse_transform(y), color='red')
+plt.plot(sc_X.inverse_transform(X),sc_y.inverse_transform(regressor.predict(X)), color='blue')
+plt.title('Truth or Bluff (Support Vector Regression)')
+plt.xlabel('Position level')
+plt.ylabel('Salary')
+plt.show()
