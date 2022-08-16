@@ -25,4 +25,8 @@ print(y)
 
 from sklearn.svm import SVR
 regressor=SVR(kernel= 'rbf')
+y=np.ravel(y)
 regressor.fit(X, y)
+
+preduct_new_result=sc_y.inverse_transform(regressor.predict(sc_X.transform([[6.5]])))
+print(preduct_new_result)
