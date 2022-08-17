@@ -27,4 +27,4 @@ print(X_test)
 
 from sklearn.linear_model import LogisticRegression
 classifier=LogisticRegression(random_state=0)
-res=classifier.fit(X_train,y_train)
+classifier.fit(X_train,y_train)
