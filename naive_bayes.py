@@ -23,3 +23,5 @@ print(X_test)
 from sklearn.naive_bayes import GaussianNB
 classifier = GaussianNB()
 classifier.fit(X_train, y_train)
+
+print(classifier.predict(sc.transform([[30,87000]])))
